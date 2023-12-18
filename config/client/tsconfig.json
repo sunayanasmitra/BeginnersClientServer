@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    /*"watch": false,*/
+    "lib":["dom","es2017"],
+    "allowJs":false,
+    "sourceMap": false,
+    "baseUrl": ".", /* This must be specified if "paths" is.*/
+	"skipLibCheck": true,
+    "typeRoots": [
+      "./../sys/types/node_modules/@types/underscore",
+	  "./../sys/types/node_modules/@types/handlebars",
+      "./../sys/types/node_modules/@types/jquery"
+    ],
+  },
+  "files":[
+
+
+    
+    "./../../typescript/client/router.ts",
+    "./../../typescript/client/start.ts",
+
+
+  ]
+}

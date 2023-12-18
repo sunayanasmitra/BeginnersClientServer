@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+   /* "watch": false, */
+    "lib":["dom","es2017"],
+    "allowJs":false,
+    "sourceMap": false, 
+    "baseUrl": ".", /* This must be specified if "paths" is. */
+	"typeRoots": [
+      /* "./../../../../sys/types/node_modules/@types/node" */
+    ]
+  },
+  "include": [
+  ],
+  "files":[
+	"./../../typescript/server/nodeserv.ts",
+  "./../../typescript/server/server.ts",
+  "./../../typescript/server/user.ts",
+  "./../../typescript/server/comment.ts",
+	"./../../typescript/server/mongoConnector.ts",
+  "./../../typescript/server/mysqlConnector.ts",
+  "./../../typescript/server/parcls.ts"
+  ]
+}
