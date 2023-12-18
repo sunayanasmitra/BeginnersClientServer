@@ -53,18 +53,16 @@ const serv_settings = {
   },
 }; 
 ```
-initSetting is a MUST for server framework to accept you settings.
+initSetting is a MUST for server framework to accept you settings and startServer is needed to start node server.
 
-startServer is needed to start node server.
-
-please remember, set your own server key and certificate for HTTPS: (if you set https instead of http in protocal above). MUST pass these in startServer when using https.
+Please remember, set your own server key and certificate for HTTPS: (if you set https instead of http in protocal above).
 ```
 const httpskey = {
-    key: nsrv.file.readFileSync("c:/apache24/conf/emilieu.key"),
-    cert: nsrv.file.readFileSync("c:/apache24/conf/emilieu.cert")
+    key: nsrv.file.readFileSync("c:/apache24/conf/example.key"),
+    cert: nsrv.file.readFileSync("c:/apache24/conf/example.cert")
 };
 ```
-add process routing pages and router actions that might optionally add database connectivity based on the REST API passed to the server. For example:
+Add processes routing pages and router actions that might optionally add database connectivity based on the REST API passed to the server. For example:
 ```
 const usr = require("./user").usrrouter;
 nsrv.app.use(serv_settings.baseuri+"user", function (req, res, next) {
@@ -83,7 +81,6 @@ usrrouter.post("/*",(req,res)=>{
 	},{"name":"FRIEND"});//,filter?,options?
 });
 ```
-
 
 ### Client Routing
 User clones and modifies start.js file. In the start.ts file, all paths for packages and technologies used are defined at the top. The user can add to this list as they please.
@@ -135,7 +132,6 @@ It is important to note that these variable names can be changed. As long as all
 ```
 const rout = the_util.getRouter(the_routes,the_funcs,the_settings);
 ```
-
 By strategically modifying the code in these sections, the user can tailor and craft their personalized client-side routing system for theur webpages. The primary focus shifts towards the creative aspect of the work, through designing the frontend graphics of the page.
 
 ## Future Updates
