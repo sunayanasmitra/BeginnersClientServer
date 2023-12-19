@@ -1,3 +1,5 @@
+/*CREATED BY SUNAYANA MITRA*/
+
 /*imported files, you can add any additional ones you may need here*/
 ///<reference path="./../../../../sys/types/node_modules/@types/underscore/index.d.ts" />
 ///<reference path="./../../../../sys/types/node_modules/@types/handlebars/index.d.ts" />
@@ -14,9 +16,9 @@ const the_settings = {
     "serverpath": ":5000/serverapi/",
     "host": "localhost",
     "pages": {
-        "home": { "path": "/DEV/SARA/data/pages/testpage.html", "id": "home" },
-        "testpage": { "path": "/DEV/SARA/data/pages/testpage.html", "id": "test" },
-        "bizpage": { "path": "/DEV/SARA/data/pages/testpage.html", "id": "business" }
+        "home": { "path": "/yourpath/pages/testpage.html", "id": "home" },
+        "testpage": { "path": "/yourpath/pages/testpage.html", "id": "test" },
+        "bizpage": { "path": "/yourpath/pages/testpage.html", "id": "business" }
     }
 };
 /*you may define the routes and route formats for each of your pages here
@@ -33,7 +35,7 @@ const the_routes = {
 needed data from the route path, allow for the movement between pages, and more. You can change this according to your needs.*/
 const the_funcs = {
     indexPage: () => {
-        the_util.displayPage("home", { "name": "Sara Mitra", "some": "some other information" });
+        the_util.displayPage("home", { "name": "Elizabeth", "some": "some other information" });
         the_util.requestData(the_settings.serverpath + 'comment/coll1/1323', '{"id":"fdfs"}', (res) => {
             console.log(res);
         }, "POST", false);
@@ -48,7 +50,7 @@ const the_funcs = {
         if (!val2)
             val2 = "empty value...";
         console.log("test vals >>>>> ", val1, val2, val3);
-        the_util.displayPage("testpage", { "name": "Sudeshna", "some": "something", "other": val1 + '====' + val2 });
+        the_util.displayPage("testpage", { "name": "Grace", "some": "something", "other": val1 + '====' + val2 });
         $("#goindex").click((e) => {
             the_util.jumpToPage("", "");
         });
@@ -59,7 +61,7 @@ const the_funcs = {
     bizPage: (val1, val2) => {
         if (!val2)
             val2 = "0";
-        the_util.displayPage("bizpage", { "name": "Sudip", "financial": val1 + '====' + val2 + " dollars" });
+        the_util.displayPage("bizpage", { "name": "Josephine", "financial": val1 + '====' + val2 + " dollars" });
         $("#goindex").click((e) => {
             the_util.jumpToPage("", "");
         });
